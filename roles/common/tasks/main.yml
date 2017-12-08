@@ -1,0 +1,45 @@
+---
+# This playbook contains common plays that will be run on all nodes.
+#
+  - name: Install python3
+    apk: 
+        name: python3
+        update_cache: yes
+
+  - name: Install git
+    apk: 
+        name: git
+        update_cache: yes
+
+  - name: Install py-psutil
+    apk: 
+        name: py-psutil
+        update_cache: yes
+
+  - name: Checkout vorhees
+    git:
+        repo: 'https://github.com/toirl/voorhees'
+        dest: '{{voorhees_path}}'
+        version: '{{voorhees_version}}'
+    notify: install voorhees
+
+  - name: Checkout tedega_view
+    git:
+        repo: 'https://github.com/tedega/tedega_view'
+        dest: '{{tedega_view_path}}'
+        version: '{{tedega_view_version}}'
+    notify: install tedega_view
+
+  - name: Checkout tedega_storage
+    git:
+        repo: 'https://github.com/tedega/tedega_storage'
+        dest: '{{tedega_storage_path}}'
+        version: '{{tedega_storage_version}}'
+    notify: install tedega_storage
+
+  - name: Checkout tedega_share
+    git:
+        repo: 'https://github.com/tedega/tedega_share'
+        dest: '{{tedega_share_path}}'
+        version: '{{tedega_share_version}}'
+    notify: install tedega_share

@@ -1,0 +1,10 @@
+---
+# This playbook contains to install the tedega example services.
+#
+
+  - name: Checkout tedega_examples
+    git:
+        repo: 'https://github.com/tedega/examples'
+        dest: '{{tedega_examples_path}}'
+        version: '{{tedega_examples_version}}'
+    notify: install tedega_examples

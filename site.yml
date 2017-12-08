@@ -1,0 +1,16 @@
+---
+# This playbook deploys the whole tedega services.
+
+- name: apply common configuration to all nodes
+  hosts: all
+  remote_user: root
+
+  roles:
+    - common
+
+- name: configure and deploy the tedega example service
+  hosts: service_example
+  remote_user: root
+
+  roles:
+    - service_example

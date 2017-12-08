@@ -1,0 +1,4 @@
+---
+# Defaults for installation and checkout of components of Tedega.
+
+    # tedega_examples_version: master

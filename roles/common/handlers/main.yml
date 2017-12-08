@@ -1,0 +1,12 @@
+---
+- name: install voorhees
+  pip: name=file://{{voorhees_path}} executable=pip3
+
+- name: install tedega_view
+  pip: name=file://{{tedega_view_path}} executable=pip3
+
+- name: install tedega_storage
+  pip: name=file://{{tedega_storage_path}} executable=pip3
+
+- name: install tedega_share
+  pip: name=file://{{tedega_share_path}} executable=pip3

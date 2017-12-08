@@ -1,0 +1,14 @@
+---
+# Defaults for installation and checkout of components of Tedega.
+
+    voorhees_path : /srv/voorhees
+    voorhees_version: master
+
+    tedega_view_path: /srv/tedega_view
+    tedega_view_version: master
+
+    tedega_storage_path: /srv/tedega_storage
+    tedega_storage_version: master
+
+    tedega_share_path: /srv/tedega_share
+    tedega_share_version: master

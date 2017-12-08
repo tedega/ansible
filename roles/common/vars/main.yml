@@ -1,0 +1,7 @@
+---
+# Defaults for installation and checkout of components of Tedega.
+
+    # voorhees_version: master
+    # tedega_view_version: master
+    # tedega_storage_version: master
+    # tedega_share_version: master
