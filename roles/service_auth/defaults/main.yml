@@ -1,0 +1,5 @@
+---
+# Defaults for installation and checkout of components of Tedega.
+
+    tedega_auth_path: /srv/tedega_auth
+    tedega_auth_version: master

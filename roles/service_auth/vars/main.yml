@@ -1,0 +1,4 @@
+---
+# Defaults for installation and checkout of components of Tedega.
+
+    # tedega_auth_version: master

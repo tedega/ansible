@@ -1,0 +1,15 @@
+---
+# This playbook contains to install the tedega example services.
+#
+
+  - name: Checkout tedega_auth
+    git:
+        repo: 'https://github.com/tedega/tedega_auth'
+        dest: '{{tedega_auth_path}}'
+        version: '{{tedega_auth_version}}'
+    notify: install tedega_auth
+
+  - name: Start auth service
+    shell: uwsgi --plugins-dir /usr/lib/uwsgi/ --need-plugin python3 --socket 0.0.0.0:5000 --protocol=http -w tedega_auth.wsgi --daemonize daemon.log
+    args:
+      chdir: '{{tedega_auth_path}}'

@@ -8,6 +8,13 @@
   roles:
     - common
 
+- name: configure and deploy tedega auth service
+  hosts: service_auth
+  remote_user: root
+
+  roles:
+    - service_auth
+
 - name: configure and deploy the tedega example service
   hosts: service_example
   remote_user: root

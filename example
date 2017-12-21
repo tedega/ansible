@@ -1,2 +1,4 @@
+[service_auth]
+service_auth ansible_port=2222 ansible_host=127.0.0.1
 [service_example]
-localhost:2222
+service_example ansible_port=2223 ansible_host=127.0.0.1

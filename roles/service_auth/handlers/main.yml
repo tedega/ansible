@@ -1,0 +1,6 @@
+---
+# Handler to handle common notifications. Handlers are called by other plays.
+# See http://docs.ansible.com/playbooks_intro.html for more information about handlers.
+#
+- name: install tedega_auth
+  pip: name=file://{{tedega_auth_path}} executable=pip3
