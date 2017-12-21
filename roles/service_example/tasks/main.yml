@@ -8,3 +8,8 @@
         dest: '{{tedega_examples_path}}'
         version: '{{tedega_examples_version}}'
     notify: install tedega_examples
+
+  - name: Start example service
+    shell: uwsgi --plugins-dir /usr/lib/uwsgi/ --need-plugin python3 --socket 0.0.0.0:5000 --protocol=http -w tedega_examples.wsgi --daemonize daemon.log
+    args:
+        chdir: '{{tedega_examples_path}}'
