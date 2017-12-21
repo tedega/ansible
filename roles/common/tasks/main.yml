@@ -16,6 +16,11 @@
         name: py-psutil
         update_cache: yes
 
+  - name: Install uwsgi-python3
+    apk: 
+        name: uwsgi-python3
+        update_cache: yes
+
   - name: Checkout vorhees
     git:
         repo: 'https://github.com/toirl/voorhees'
